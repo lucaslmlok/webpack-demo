@@ -5,7 +5,6 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
-    print: "./src/print.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -22,7 +21,4 @@ module.exports = {
       title: "Webpack Demo",
     }),
   ],
-  optimization: {
-    runtimeChunk: "single",
-  },
 };
