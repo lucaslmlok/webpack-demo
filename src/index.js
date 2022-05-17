@@ -1,7 +1,14 @@
+import "./styles/main.scss";
+import _ from "lodash";
+import aurora from "./assets/aurora.jpg";
+
 const getComponent = async () => {
   const element = document.createElement("div");
-  const { default: _ } = await import("lodash");
   element.innerHTML = _.join(["Hello", "webpack"], " ");
+
+  const myImage = new Image();
+  myImage.src = aurora;
+  element.appendChild(myImage);
   return element;
 };
 

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+$color-primary: #1b5c8a;
+$color-secondary: #c3dee9;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-secondary;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: $color-primary;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
