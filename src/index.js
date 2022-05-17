@@ -1,17 +1,26 @@
+import "regenerator-runtime/runtime";
 import "./styles/main.scss";
 import _ from "lodash";
 import aurora from "./assets/aurora.jpg";
 
-const getComponent = async () => {
-  const element = document.createElement("div");
+const getH2 = async () => {
+  const element = document.createElement("h2");
   element.innerHTML = _.join(["Hello", "webpack"], " ");
-
-  const myImage = new Image();
-  myImage.src = aurora;
-  element.appendChild(myImage);
   return element;
 };
 
-getComponent().then((component) => {
-  document.body.appendChild(component);
-});
+const getImg = async () => {
+  const img = new Image();
+  img.src = aurora;
+  return img;
+};
+
+const main = async () => {
+  const h2 = await getH2();
+  document.body.appendChild(h2);
+
+  const img = await getImg();
+  document.body.appendChild(img);
+};
+
+main();
